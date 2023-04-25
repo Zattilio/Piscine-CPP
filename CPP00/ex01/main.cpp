@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 16:33:55 by jlanza            #+#    #+#             */
-/*   Updated: 2023/04/25 17:57:55 by jlanza           ###   ########.fr       */
+/*   Created: 2023/04/25 17:11:05 by jlanza            #+#    #+#             */
+/*   Updated: 2023/04/25 18:26:27 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	PHONEBOOK_CLASS_H
-# define PHONEBOOK_CLASS_H
+#include <iostream>
+#include "PhoneBook.class.hpp"
 
-# include "Contact.class.hpp"
-# include <iostream>
+int	main(int argc, char *argv[])
+{
+	std::string	buf;
+	PhoneBook	book;
 
-class	PhoneBook {
-
-public:
-
-	Contact	contact[8];
-
-	PhoneBook(void);
-	~PhoneBook(void);
-
-	int		add(void);
-	void	search(void);
-
-private:
-	int		index;
-	int		get_index(void) const;
-};
-
-#endif
+	while (1)
+	{
+		std::cin >> buf;
+		if (std::cin.eof())
+			return (1);
+		if (buf == "ADD")
+			book.add();
+		if (buf == "SEARCH")
+			book.search();
+		if (buf == "EXIT")
+			return (0);
+	}
+	(void)argc;
+	(void)argv;
+}

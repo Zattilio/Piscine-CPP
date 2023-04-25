@@ -6,16 +6,18 @@
 #    By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 15:24:20 by jlanza            #+#    #+#              #
-#    Updated: 2023/04/24 15:16:56 by jlanza           ###   ########.fr        #
+#    Updated: 2023/04/25 18:14:23 by jlanza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 # ----------------------------------- VARS -------------------------------------
 
-NAME	= megaphone
+NAME	= phonebook
 
-SRC		= megaphone.cpp
+SRC		=	PhoneBook.class.cpp \
+			Contact.class.cpp \
+			main.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 
@@ -30,7 +32,7 @@ RM		= rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(HEADER) -o $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
@@ -42,17 +44,6 @@ re: fclean all
 
 .cpp.o:
 	$(CC) $(CFLAGS) -c $< -o ${<:.cpp=.o}
-
-# ------------------------------------- TESTS ----------------------------------
-
-test1: all
-	./$(NAME) "shhhhh... I think the students are asleep..."
-
-test2: all
-	./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
-
-test3: all
-	./$(NAME)
 
 # ---------------------------------- PHONY ------------------------------------
 
