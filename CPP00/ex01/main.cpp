@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:11:05 by jlanza            #+#    #+#             */
-/*   Updated: 2023/04/27 16:18:40 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/04/28 18:57:12 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	main(int argc, char *argv[])
 		std::cerr << "Too many arguments.";
 		return (1);
 	}
-	std::cout << "Enter command:" << std::endl;
+	std::cout << "Enter command: ";
 	while (1)
 	{
-		std::cin >> buf;
+		std::getline(std::cin, buf);
 		if (std::cin.eof())
 			return (1);
 		else if (buf == "ADD")
@@ -38,6 +38,8 @@ int	main(int argc, char *argv[])
 			return (0);
 		else
 			std::cout << "Invalid command: use ADD, SEARCH or EXIT" << std::endl;
-		std::cout << std::endl << "Enter command:" << std::endl;
+		if (std::cin.eof())
+			return (1);
+		std::cout << std::endl << "Enter command: ";
 	}
 }

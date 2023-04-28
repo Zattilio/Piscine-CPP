@@ -6,7 +6,7 @@
 #    By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 15:24:20 by jlanza            #+#    #+#              #
-#    Updated: 2023/04/25 18:14:23 by jlanza           ###   ########.fr        #
+#    Updated: 2023/04/28 18:49:56 by jlanza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,10 @@
 
 NAME	= phonebook
 
-SRC		=	PhoneBook.class.cpp \
-			Contact.class.cpp \
-			main.cpp
+SRC		=	main.cpp \
+			PhoneBook.class.cpp \
+			Contact.class.cpp
+
 
 OBJS	= $(SRC:.cpp=.o)
 
