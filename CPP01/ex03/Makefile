@@ -6,18 +6,19 @@
 #    By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 15:24:20 by jlanza            #+#    #+#              #
-#    Updated: 2023/05/15 16:11:17 by jlanza           ###   ########.fr        #
+#    Updated: 2023/05/22 18:01:21 by jlanza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 # ----------------------------------- VARS -------------------------------------
 
-NAME	= zombie
+NAME	= weapon
 
 SRC		=	main.cpp \
-			Zombie.cpp \
-			zombieHorde.cpp
+			Weapon.cpp \
+			HumanA.cpp \
+			HumanB.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 

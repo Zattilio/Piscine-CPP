@@ -6,9 +6,12 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:48:26 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/15 15:38:53 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/22 16:33:47 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <iostream>
 
@@ -29,3 +32,5 @@ public:
 };
 
 Zombie* zombieHorde( int N, std::string name );
+
+#endif
