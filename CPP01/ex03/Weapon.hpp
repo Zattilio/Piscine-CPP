@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:15:59 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/22 17:55:45 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/23 14:38:05 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WEAPON_HPP
 
 #include <iostream>
+#include <string>
 
 class Weapon
 {
