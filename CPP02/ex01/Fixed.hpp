@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 12:55:41 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/25 17:48:42 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/25 17:43:23 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ private:
 
 public:
 	Fixed(void);
+	Fixed(int n);
+	Fixed(float f);
 	~Fixed();
 
 	Fixed(Fixed const & src);
@@ -31,6 +33,9 @@ public:
 
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
+
+	float	toFloat(void) const;
+	int		toInt(void) const;
 };
 
 std::ostream & operator<<(std::ostream & os, Fixed const & instance);
