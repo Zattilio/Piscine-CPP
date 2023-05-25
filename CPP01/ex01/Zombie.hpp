@@ -6,14 +6,14 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:48:26 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/24 19:11:05 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/25 13:08:35 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
-#include <iostream>
+# include <iostream>
 
 class Zombie
 {

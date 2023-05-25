@@ -6,9 +6,12 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:58:51 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/24 18:48:03 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/25 13:07:27 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <iostream>
 
@@ -28,3 +31,5 @@ public:
 	~Harl();
 	void	complain( std::string level );
 };
+
+#endif
