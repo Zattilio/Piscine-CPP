@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:57:26 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/24 17:54:57 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/25 12:45:40 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ int	level_to_int(char *str)
 int	main (int argc, char *argv[])
 {
 	if (argc != 2)
+	{
 		std::cout << "Wrong number of arguments" << std::endl;
+		return (1);
+	}
 
 	Harl		Karen;
 	std::string	str(argv[1]);

@@ -6,7 +6,7 @@
 #    By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 15:24:20 by jlanza            #+#    #+#              #
-#    Updated: 2023/05/15 16:11:17 by jlanza           ###   ########.fr        #
+#    Updated: 2023/05/24 19:15:21 by jlanza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) *.replace
 
 re: fclean all
 
@@ -48,7 +48,7 @@ re: fclean all
 # ------------------------------------- TESTS ----------------------------------
 
 test: all
-	./$(NAME)
+	./$(NAME) 
 
 memory: all
 	valgrind ./$(NAME)

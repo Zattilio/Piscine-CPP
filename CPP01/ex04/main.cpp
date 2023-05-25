@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:51:08 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/23 18:05:16 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/25 12:45:18 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,42 @@
 #include <fstream>
 #include <sstream>
 
-void	ft_replace(std::string & str, std::string const search, std::string const replace)
+void	ft_replace(std::string & str, std::string const search, std::string const replace, std::ofstream *ofs)
 {
 	int	pos;
 
 	while (str.find(search) != std::string::npos)
 	{
 		pos = str.find(search);
-		str.erase(pos, search.size());
-		str.insert(pos, replace);
+		*ofs << str.substr(0, pos);
+		*ofs << replace;
+		str.erase(0, pos + search.size());
 	}
+	*ofs << str;
 }
 
 int	main(int argc, char *argv[])
 {
-	std::string			ofs_name;
 	std::ostringstream	buf;
 	std::string			str;
-	std::string			search(argv[2]);
-	std::string			replace(argv[3]);
 
-	if (argc != 4 || !argv[1][0] || !argv[2][0])
+	if (argc != 4 || !argv[1][0] || !argv[2][0] || !argv[3][0])
 	{
 		std::cerr << "Arguments invalid" << std::endl;
 		return (1);
 	}
 
+	std::string			search(argv[2]);
+	std::string			replace(argv[3]);
 	std::ifstream	ifs(argv[1]);
 	if (!ifs.is_open())
 	{
 		std::cerr << "Can't open " << argv[1] << std::endl;
 		return (2);
 	}
-	ofs_name = (std::string)argv[1] + ".replace";
+
+	std::string ofs_name(argv[1]);
+	ofs_name += ".replace";
 	std::ofstream	ofs(ofs_name.c_str());
 	if (!ofs.is_open())
 	{
@@ -57,8 +60,7 @@ int	main(int argc, char *argv[])
 
 	buf << ifs.rdbuf();
 	str = buf.str();
-	ft_replace(str, search, replace);
-	ofs << str;
+	ft_replace(str, search, replace, &ofs);
 	ifs.close();
 	ofs.close();
 	return (1);

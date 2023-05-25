@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:48:30 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/15 14:50:37 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/24 19:10:18 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 Zombie::Zombie()
 {
+}
+
+Zombie::Zombie(std::string str)
+{
+	this->name = str;
 }
 
 Zombie::~Zombie()

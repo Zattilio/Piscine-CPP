@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:48:26 by jlanza            #+#    #+#             */
-/*   Updated: 2023/05/22 16:33:47 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/05/24 19:11:05 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ private:
 public:
 
 	Zombie();
+	Zombie(std::string str);
 	~Zombie();
 	std::string	get_name(void) const;
 	void		set_name(std::string name);
