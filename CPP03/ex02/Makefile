@@ -6,17 +6,18 @@
 #    By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 15:24:20 by jlanza            #+#    #+#              #
-#    Updated: 2023/06/01 14:48:05 by jlanza           ###   ########.fr        #
+#    Updated: 2023/06/01 15:04:03 by jlanza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 # ----------------------------------- VARS -------------------------------------
 
-NAME	= ex00
+NAME	= ex02
 
 SRC		=	main.cpp \
-			ClapTrap.cpp
+			ClapTrap.cpp \
+			FragTrap.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 

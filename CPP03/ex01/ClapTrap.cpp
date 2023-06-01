@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 15:19:42 by jlanza            #+#    #+#             */
-/*   Updated: 2023/06/01 20:55:41 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/06/01 20:48:46 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
+	std::cout << "Copy Constructor of Claptrap called (" << this->_name << ")" << std::endl;
 	this->_name = src._name;
 	this->_hit_points = src._hit_points;
 	this->_energy_points = src._energy_points;
 	this->_attack_damage = src._attack_damage;
-	std::cout << "Copy Constructor of ClapTrap called (" << this->_name << ")" << std::endl;
 }
 
 ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
