@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:47:19 by jlanza            #+#    #+#             */
-/*   Updated: 2023/06/01 21:12:29 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/06/02 03:12:49 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 DiamondTrap::DiamondTrap(void)
 {
 	this->_name = "default";
-	this->_hit_points = FragTrap::_hit_points;
-	this->_energy_points = ScavTrap::_energy_points;
-	this->_attack_damage = ScavTrap::_attack_damage;
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 30;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)

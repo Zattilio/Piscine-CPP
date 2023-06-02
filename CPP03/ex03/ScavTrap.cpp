@@ -6,7 +6,7 @@
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:03:33 by jlanza            #+#    #+#             */
-/*   Updated: 2023/06/01 20:58:33 by jlanza           ###   ########.fr       */
+/*   Updated: 2023/06/02 03:33:28 by jlanza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "String Constructor of ScavTrap called (" << name << ")" << std::endl;
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap() 
 {
 	std::cout << "Destructor of ScavTrap called (" << this->_name << ")" << std::endl;
 }
